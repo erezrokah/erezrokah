@@ -12,7 +12,7 @@ Some of the nice things I did/doing
 ### ClickHouse
 - [3x improvement in memory allocations in ClickHouse Go SDK](https://github.com/ClickHouse/clickhouse-go/pull/1686). [Pushed](https://github.com/ClickHouse/ClickHouse/pull/80761#issuecomment-3460823094) ClickHouse to fix this on the server side
 - [Fixed panic when scanning nullable JSON](https://github.com/ClickHouse/clickhouse-go/pull/1770)
-- [5 fixes to the ClickHouse SQL parser](https://github.com/AfterShip/clickhouse-sql-parser/pulls?q=author%3Aerezrokah) — keyword handling, union distinct parsing, AST traversal
+- [5 fixes to a third party ClickHouse SQL parser](https://github.com/AfterShip/clickhouse-sql-parser/pulls?q=author%3Aerezrokah) — keyword handling, union distinct parsing, AST traversal
 
 ### Apache Arrow
 - [Added configurable Timestamp output layout](https://github.com/apache/arrow-go/pull/510)
