@@ -9,6 +9,9 @@ Some of the nice things I did/doing
 
 ## Open Source Contributions
 
+### Cloudflare 
+- [Critical](https://github.com/emdash-cms/emdash/pull/201) and [high](https://github.com/emdash-cms/emdash/pull/375) severities supply chain attack findings and fixes
+
 ### ClickHouse
 - [3x improvement in memory allocations in ClickHouse Go SDK](https://github.com/ClickHouse/clickhouse-go/pull/1686). [Pushed](https://github.com/ClickHouse/ClickHouse/pull/80761#issuecomment-3460823094) ClickHouse to fix this on the server side
 - [Fixed panic when scanning nullable JSON](https://github.com/ClickHouse/clickhouse-go/pull/1770)
