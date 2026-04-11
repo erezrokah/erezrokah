@@ -4,7 +4,7 @@ Some of the nice things I did/doing
 
 ## Roles
 - Lead maintainer at [CloudQuery](https://github.com/cloudquery/cloudquery)
-- Previously lead maintainer [Netlify CLI](https://github.com/netlify/cli)
+- Previously lead maintainer [Netlify CLI](https://github.com/netlify/cli), contributor to [Netlify Framework Info](https://github.com/netlify/framework-info) and [Netlify Build](https://github.com/netlify/build)
 - Previously lead maintainer Netlify CMS, now [Decap CMS](https://github.com/decaporg/decap-cms)
 
 ## Open Source Contributions
