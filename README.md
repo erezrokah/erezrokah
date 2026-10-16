@@ -1,21 +1,29 @@
 # Hello lovely people 👋
 
+Security-oriented engineer focused on developer tooling for humans and agents.
+
 Some of the nice things I did/doing
 
 ## Roles
-- Lead maintainer at [CloudQuery](https://github.com/cloudquery/cloudquery)
+- Staff engineer & tech lead at [CloudQuery](https://github.com/cloudquery/cloudquery) (env0) - open source ELT framework, plus an internal fleet of AI agents that people trigger and steer from wherever they already work
 - Previously lead maintainer [Netlify CLI](https://github.com/netlify/cli), contributor to [Netlify Framework Info](https://github.com/netlify/framework-info) and [Netlify Build](https://github.com/netlify/build)
 - Previously lead maintainer Netlify CMS, now [Decap CMS](https://github.com/decaporg/decap-cms)
 
 ## Open Source Contributions
 
-### Cloudflare 
+### Cloudflare
 - [Critical](https://github.com/emdash-cms/emdash/pull/201) and [high](https://github.com/emdash-cms/emdash/pull/375) severities supply chain attack findings and fixes
 
 ### ClickHouse
+- [Bound Parquet write batches by bytes, not only by rows](https://github.com/ClickHouse/ClickHouse/pull/120028) - writing wide rows went from crashing at 6.59 GB peak memory to writing correctly at 2.57 GB. Taken over and [merged](https://github.com/ClickHouse/ClickHouse/pull/122482) by ClickHouse's CTO with my commits kept
+- [Fixed Parquet size statistics being counted twice](https://github.com/ClickHouse/ClickHouse/pull/120027) when the dictionary falls back - the size estimate was 54% too high
+- [Added integration tests for wide-row Parquet memory over `s3()`](https://github.com/ClickHouse/ClickHouse/pull/119300) - caught a memory regression before it reached ClickHouse Cloud
 - [3x improvement in memory allocations in ClickHouse Go SDK](https://github.com/ClickHouse/clickhouse-go/pull/1686). [Pushed](https://github.com/ClickHouse/ClickHouse/pull/80761#issuecomment-3460823094) ClickHouse to fix this on the server side
 - [Fixed panic when scanning nullable JSON](https://github.com/ClickHouse/clickhouse-go/pull/1770)
-- [5 fixes to a third party ClickHouse SQL parser](https://github.com/AfterShip/clickhouse-sql-parser/pulls?q=author%3Aerezrokah) — keyword handling, union distinct parsing, AST traversal
+- [10 fixes to a third party ClickHouse SQL parser](https://github.com/AfterShip/clickhouse-sql-parser/pulls?q=author%3Aerezrokah) - keyword handling, `union distinct` parsing, AST traversal
+
+### jsdom
+- [Reported](https://github.com/jsdom/jsdom/issues/4309) and [helped fix](https://github.com/jsdom/jsdom/pull/4310) quadratic `HTMLCollection` iteration, with tests and benchmarks - copying a collection is ~15x faster at 500 elements and ~150x at 2,000. Together with a local workaround, cut a large frontend test suite from 25.9 to 13.5 minutes
 
 ### Apache Arrow
 - [Added configurable Timestamp output layout](https://github.com/apache/arrow-go/pull/510)
@@ -23,7 +31,7 @@ Some of the nice things I did/doing
 
 ### Cloud SDKs
 - [Discovered memory issues in AWS S3 Go SDK](https://github.com/aws/aws-sdk-go-v2/issues/2694) and suggested a fix that was later adopted
-- [Discovered memory issues in Azure Go SDK](https://github.com/Azure/azure-sdk-for-go/issues/20470#issuecomment-2414374957) — plus [14 issues filed](https://github.com/Azure/azure-sdk-for-go/issues?q=author%3Aerezrokah) covering wrong API versions, pagination bugs, and missing data
+- [Discovered memory issues in Azure Go SDK](https://github.com/Azure/azure-sdk-for-go/issues/20470#issuecomment-2414374957) - plus [14 issues filed](https://github.com/Azure/azure-sdk-for-go/issues?q=author%3Aerezrokah) covering wrong API versions, pagination bugs, and missing data
 - Reported breaking changes shipped as minor versions in [AWS SDK](https://github.com/aws/aws-sdk-go-v2/issues?q=author%3Aerezrokah) and [Google Cloud Go SDK](https://github.com/googleapis/google-cloud-go/issues?q=author%3Aerezrokah)
 - [Fixed retry re-auth in Okta Go SDK](https://github.com/okta/okta-sdk-golang/pull/562)
 
